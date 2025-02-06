@@ -1,12 +1,15 @@
 """
 Unit tests for the mathematical operations.
 """
-import pytest
-import sys 
+
+import sys
 import os
+
+# Add the project root to sys.path so that local modules can be imported.
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.operations import add, subtract, multiply, divide
+import pytest  # third-party import
+from src.operations import add, subtract, multiply, divide  # local import
 
 def test_add() -> None:
     """Test the add function."""
