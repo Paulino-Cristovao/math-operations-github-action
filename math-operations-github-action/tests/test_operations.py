@@ -5,11 +5,12 @@ Unit tests for the mathematical operations.
 import sys
 import os
 
-# Add the project root to sys.path so that local modules can be imported.
+# Insert the project root into sys.path so that local modules are found.
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import pytest  # third-party import
-from src.operations import add, subtract, multiply, divide  # local import
+# The following imports must come after the sys.path modification.
+import pytest  # pylint: disable=wrong-import-position
+from src.operations import add, subtract, multiply, divide  # pylint: disable=wrong-import-position
 
 def test_add() -> None:
     """Test the add function."""
