@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./math-operations-github-action/src"
+    ]
+}
